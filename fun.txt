@@ -1,0 +1,5 @@
+<<<<<<< HEAD
+it is not same
+=======
+hi this is fun
+>>>>>>> 7281f4a... added fun element
