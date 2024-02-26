@@ -10,7 +10,7 @@ workflow: configurable automated process that runs one or more jobs
           needs atleast one job
 
 job: set of steps that execute on same runner(machine)
-step: script/action, executed in order, can transfer data among different steps
+step: script/action, executed in order, can transfer data among different steps via 'steps.<id>.outputs.<varname>', can transfer data among different jobs 'needs.<jobname>.outputs.<_>'
 
 * action: custom application, used with 'uses: actions/<name>@'
           e.g. actions/upload-artifact@v2, actions/download-artifact@v2, etc.
@@ -25,5 +25,7 @@ step: script/action, executed in order, can transfer data among different steps
 
 * github artifacts: share/stores data once workflow has ended 
 
-* environment configuration: protocols, secrets
+* settings/environment configuration: protocols(protection for approvals to prevent direct deployment, wait timer for delaying job), env secrets(if not present then it takes repo secret)
+
+* runner: github hosted runner/ self hosted runner
 
