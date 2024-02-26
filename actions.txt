@@ -1,0 +1,9 @@
+github action: CI/CD platform that allows to automate sdlc tasks
+               It is beyond this.
+
+workflow: configurable automated process that runs one or more jobs
+          triggers when a particular event happens
+          defined by yaml file
+          e.g. PR, labelling, testing and building pipeline, merging requests, etc.
+          series of actions that needs to be done
+          inside  ".github/workflows" as a .yml file
