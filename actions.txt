@@ -29,3 +29,6 @@ step: script/action, executed in order, can transfer data among different steps 
 
 * runner: github hosted runner/ self hosted runner
 
+* CI: devops software development practice where after merge requests by developers automated tests/ build run, thereby helping developers to just focus on dev
+  CD: automation for software deployment
+
