@@ -33,7 +33,7 @@ jobs:
      needs: [build0, build1]
      runs-on: ubuntu-latest
      steps:
-      - run: echo build2
+      - run: echo build2 ${{env.name1}}
       
   
 
