@@ -1,0 +1,40 @@
+name: demo1 github actions
+
+# to automatically trigger workflow
+on:
+  #for manual trigger
+  workflow_dispatch:
+
+
+env:
+  name1: Rohit
+  style: boss
+  
+# main work to be performed
+jobs:
+  #job1
+  build0:
+    env:
+      name1: Munna
+      style: boss
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "build0 ${env.name1}"
+
+  build1:
+     runs-on: ubuntu-latest
+     steps:
+      - run: echo build1 ${env.name1}
+        env:
+          name1: Sona
+          style: boss
+      
+  build2:
+     needs: [build0, build1]
+     runs-on: ubuntu-latest
+     steps:
+      - run: echo build2
+      
+  
+
+      
