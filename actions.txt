@@ -7,3 +7,21 @@ workflow: configurable automated process that runs one or more jobs
           e.g. PR, labelling, testing and building pipeline, merging requests, etc.
           series of actions that needs to be done
           inside  ".github/workflows" as a .yml file
+          needs atleast one job
+
+job: set of steps that execute on same runner(machine)
+step: script/action, executed in order, can transfer data among different steps
+
+* action: custom application, used with 'uses: actions/<name>@'
+          e.g. actions/upload-artifact@v2, actions/download-artifact@v2, etc.
+
+* each job runs on different machines in parallel unless dependent
+
+* environment variables: to store some info to be used later, scopes work like C language dynamic scoping
+                         default env variables: env(prints all default env variables for different runners), $GITHUB_ENV, etc.
+
+* settings/secrets/actions: everything stored here are encrypted, we can't see it but always update it
+                            we use it in github actions in yml file as `${{secrets.<name>}}` but just prints "***", but we can use it for any other purpose
+
+* github artifacts: share/stores data once workflow has ended 
+
