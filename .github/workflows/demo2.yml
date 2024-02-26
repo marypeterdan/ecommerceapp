@@ -23,6 +23,7 @@ jobs:
       - run: echo "hi this is rohit from hostel of NMIT" > file.txt
       - uses: actions/upload-artifact@v2
         with: 
+            name: file
             path: file.txt
             retention-days: 10
         
@@ -41,6 +42,8 @@ jobs:
      steps:
       - run: echo build2 ${{env.name1}}
       - uses: actions/download-artifact@v2
+        with: 
+            name: file
       - run: cat file.txt
       
   
