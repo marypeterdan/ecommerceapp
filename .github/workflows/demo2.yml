@@ -22,6 +22,8 @@ jobs:
       - run: echo "build0 ${{env.name1}}"
       - run: echo "hi this is rohit from hostel of NMIT" > file.txt
       - uses: actions/upload-artifact@v2
+        with: 
+            path: file.txt
         
 
   build1:
