@@ -1,4 +1,4 @@
-name: demo1 github actions
+name: demo2 github actions
 
 # to automatically trigger workflow
 on:
@@ -24,6 +24,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with: 
             path: file.txt
+            retention-days: 10
         
 
   build1:
