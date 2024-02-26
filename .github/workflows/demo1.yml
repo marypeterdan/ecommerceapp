@@ -19,12 +19,12 @@ jobs:
       style: boss
     runs-on: ubuntu-latest
     steps:
-      - run: echo "build0 ${env.name1}"
+      - run: echo "build0 ${{env.name1}}"
 
   build1:
      runs-on: ubuntu-latest
      steps:
-      - run: echo build1 ${env.name1}
+      - run: echo build1 ${{env.name1}}
         env:
           name1: Sona
           style: boss
