@@ -25,3 +25,5 @@ step: script/action, executed in order, can transfer data among different steps
 
 * github artifacts: share/stores data once workflow has ended 
 
+* environment configuration: protocols, secrets
+
