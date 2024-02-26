@@ -41,7 +41,7 @@ jobs:
      steps:
       - run: echo build2 ${{env.name1}}
       - run: cat file.txt
-      - uses: actions/upload-artifact@v2
+      - uses: actions/download-artifact@v2
       
   
 
